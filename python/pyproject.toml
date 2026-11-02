@@ -1,0 +1,10 @@
+[project]
+name = "gemini-cua-toolset-python"
+version = "0.1.0"
+description = "Quickstart: give Gemini a browser through the Google Gen AI SDK and Stagehand"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["google-genai>=2.34.0,<3", "stagehand-gemini-sdk==0.1.0"]
+
+[tool.uv.sources]
+stagehand-gemini-sdk = { path = "../packages/python", editable = true }

@@ -1,0 +1,15 @@
+{
+  "name": "gemini-cua-toolset",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm --filter stagehand-gemini-sdk build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm --filter stagehand-gemini-sdk test",
+    "test:browser": "pnpm --filter stagehand-gemini-sdk test:browser",
+    "format:check": "prettier --check \"**/*.{ts,json,md,yaml}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}

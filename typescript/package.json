@@ -1,0 +1,22 @@
+{
+  "name": "gemini-cua-toolset",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "example": "tsx --env-file=.env example.ts"
+  },
+  "dependencies": {
+    "@google/genai": "2.32.0",
+    "stagehand-gemini-sdk": "0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "stagehand-gemini-sdk",
+  "version": "0.1.0",
+  "description": "Stagehand browser driver and Computer Use runner for the Gemini Interactions API",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:browser": "tsx tests/browser-smoke.ts",
+    "prepack": "pnpm build"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "dependencies": {
+    "@browserbasehq/stagehand": "^4.3.0"
+  },
+  "peerDependencies": {
+    "@google/genai": ">=2.32.0 <3"
+  },
+  "devDependencies": {
+    "@google/genai": "2.32.0",
+    "@types/node": "^25.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishalanton16/gemini-cua-toolset.git",
+    "directory": "packages/typescript"
+  },
+  "homepage": "https://github.com/vishalanton16/gemini-cua-toolset#readme",
+  "bugs": {
+    "url": "https://github.com/vishalanton16/gemini-cua-toolset/issues"
+  }
+}

@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stagehand-gemini-sdk"
+version = "0.1.0"
+description = "Stagehand browser driver and Computer Use runner for the Gemini Interactions API"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = ["google-genai>=2.34.0,<3", "stagehand>=4.3.0,<5"]
+
+[project.urls]
+Homepage = "https://github.com/vishalanton16/gemini-cua-toolset"
+Source = "https://github.com/vishalanton16/gemini-cua-toolset/tree/main/packages/python"
+Issues = "https://github.com/vishalanton16/gemini-cua-toolset/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/stagehand_gemini_sdk"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/README.md", "/LICENSE", "/pyproject.toml"]
+
+[dependency-groups]
+dev = ["ruff>=0.14", "pyright>=1.1.400", "twine>=6.0"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.pyright]
+include = ["src"]
+typeCheckingMode = "basic"
